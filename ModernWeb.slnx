@@ -1,0 +1,12 @@
+<Solution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/microsoft/vs-solutionpersistence/main/src/Microsoft.VisualStudio.SolutionPersistence/Serializer/Xml/Slnx.xsd">
+	<Project Path="Northwind.Blazor/Northwind.Blazor/Northwind.Blazor.csproj" />
+	<Project Path="Northwind.Blazor/Northwind.Blazor.Client/Northwind.Blazor.Client.csproj" />
+	<Project Path="Northwind.Blazor.Services/Northwind.Blazor.Services.csproj" />
+	<Project Path="Northwind.DataContext.Sqlite/Northwind.DataContext.Sqlite.csproj" />
+	<Project Path="Northwind.EntityModels.Sqlite/Northwind.EntityModels.Sqlite.csproj" />
+	<Project Path="Northwind.UnitTests/Northwind.UnitTests.csproj" />
+	<Project Path="Northwind.Web/Northwind.Web.csproj" />
+	<Project Path="Northwind.WebApi/Northwind.WebApi.csproj" />
+	<Project Path="Northwind.WebApi.WasmClient/Northwind.WebApi.WasmClient.csproj" />
+</Solution>

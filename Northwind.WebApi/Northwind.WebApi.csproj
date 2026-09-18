@@ -1,0 +1,19 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/msbuild/2003 https://raw.githubusercontent.com/dotnet/msbuild/v17.14.13/src/MSBuild/Microsoft.Build.xsd" Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<!-- XML documentation comments into the OpenAPI -->
+		<!-- <GenerateDocumentationFile>true</GenerateDocumentationFile> -->
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+	</ItemGroup>
+	<ItemGroup Label="To simplify use of WriteLine.">
+		<Using Include="System.Console" Static="true" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="../Northwind.DataContext.Sqlite/Northwind.DataContext.Sqlite.csproj" />
+		<PackageReference Include="Scalar.AspNetCore" />
+	</ItemGroup>
+</Project>

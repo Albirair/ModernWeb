@@ -1,0 +1,17 @@
+@page "/"
+@code
+{
+	public string DayName { get; set; } = DateTime.Today.ToString("dddd");
+}
+<PageTitle>Welcome to Northwind B2B</PageTitle>
+<div class="container">
+	<div class="jumbotron">
+		<h1 class="display-3">Welcome to Northwind B2B</h1>
+		<p class="lead">We supply products to our customers.</p>
+		<hr />
+		<p>It is @DayName, our customers include restaurants, hotels, and cruise lines.</p>
+		<p>
+			<a class="btn btn-primary" href="https://www.asp.net/">Learn more</a>
+		</p>
+	</div>
+</div>
