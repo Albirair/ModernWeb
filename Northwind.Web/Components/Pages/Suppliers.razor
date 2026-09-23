@@ -1,15 +1,5 @@
 @page "/suppliers"
 @inject NorthwindContext _db
-@code {
-	private IQueryable? Companies { get; set; }
-	protected override void OnInitialized()
-	{
-		Companies = _db.Suppliers
-		.OrderBy(c => c.Country)
-		.ThenBy(c => c.CompanyName)
-		.Select((s) => new {s.CompanyName, s.Country, s.Phone});
-	}
-}
 <div class="row">
 	<h1 class="display-2">Suppliers</h1>
 	<table class="table">

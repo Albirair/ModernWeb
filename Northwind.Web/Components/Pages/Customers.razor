@@ -1,15 +1,6 @@
 @using Northwind.EntityModels
 @page "/customers"
 @inject NorthwindContext _db
-@code
-{
-	public ILookup<string?, Customer>? CustomersByCountry;
-	private string title = "Customers by Country";
-	protected override void OnInitialized()
-	{
-		CustomersByCountry = _db.Customers.ToLookup(c => c.Country);
-	}
-}
 <div class="row">
 	<h1 class="display-2">@title</h1>
 	<div>

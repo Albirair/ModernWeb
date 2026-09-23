@@ -3,7 +3,7 @@
 @inject HttpClient Http
 <h3>
 	Customers @(string.IsNullOrWhiteSpace(Country)
-	? "Worldwide" : "in " + Country)
+		? "Worldwide" : "in " + Country)
 </h3>
 @if (customers is null)
 {
@@ -38,22 +38,4 @@ else
 			}
 		</tbody>
 	</table>
-}
-@code {
-	[Parameter]
-	public string? Country { get; set; }
-	private IEnumerable<Customer>? customers;
-	protected override async Task OnParametersSetAsync()
-	{
-		if (string.IsNullOrWhiteSpace(Country))
-		{
-			customers = await Http.GetFromJsonAsync
-			<Customer[]>("/customers");
-		}
-		else
-		{
-			customers = await Http.GetFromJsonAsync
-			<Customer[]>($"/customers/in/{Country}");
-		}
-	}
 }

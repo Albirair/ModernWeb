@@ -2,18 +2,6 @@
 @using Northwind.EntityModels @* To use Customer. *@
 @page "/customerorders/{CustomerId}"
 @inject NorthwindContext _db
-@code
-{
-	[Parameter]
-	public string? CustomerId { get; set; }
-	public Customer? Customer { get; set; }
-	private string title = "Customer and their orders";
-	protected override void OnInitialized()
-	{
-		Customer = _db.Customers.Include(c => c.Orders)
-		  .SingleOrDefault(c => c.CustomerId == CustomerId);
-	}
-}
 <div class="row">
 	<h1 class="display-2">@title</h1>
 	<div>
