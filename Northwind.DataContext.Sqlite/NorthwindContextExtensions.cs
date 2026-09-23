@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore; // To use UseSqlite.
 using Microsoft.Extensions.DependencyInjection; // To use IServiceCollection.
 namespace Northwind.EntityModels;
-
 public static class NorthwindContextExtensions
 {
 	/// <summary>

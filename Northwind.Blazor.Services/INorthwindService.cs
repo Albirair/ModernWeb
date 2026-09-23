@@ -1,6 +1,5 @@
 using Northwind.EntityModels; // To use Customer.
 namespace Northwind.Blazor.Services;
-
 public interface INorthwindService
 {
 	Task<List<Customer>> GetCustomersAsync();

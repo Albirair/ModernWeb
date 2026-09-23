@@ -1,6 +1,5 @@
 using Microsoft.Extensions.Primitives; // To use StringValues.
 namespace Northwind.WebApi.Middleware;
-
 public class SecurityHeaders
 {
 	private readonly RequestDelegate next;

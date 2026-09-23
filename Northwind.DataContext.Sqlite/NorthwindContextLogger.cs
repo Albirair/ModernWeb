@@ -1,6 +1,5 @@
 using static System.Environment;
 namespace Northwind.EntityModels;
-
 public class NorthwindContextLogger
 {
 	public static void WriteLine(string message)

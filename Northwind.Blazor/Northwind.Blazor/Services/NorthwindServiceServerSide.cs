@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore; // To use ToListAsync<T>.
 namespace Northwind.Blazor.Services;
-
 public class NorthwindServiceServerSide : INorthwindService
 {
 	private readonly NorthwindContext _db;
@@ -47,7 +46,6 @@ public class NorthwindServiceServerSide : INorthwindService
 			return _db.SaveChangesAsync();
 		}
 	}
-
 	public List<string?> GetCountries()
 	{
 		return _db.Customers.Select(c => c.Country).Distinct().Order().ToList();
